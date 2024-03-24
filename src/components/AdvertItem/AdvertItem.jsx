@@ -1,5 +1,12 @@
 import * as SC from "./AdvertItem.styled";
 import sprite from "../../assets/sprite.svg";
+import { useModal } from "../../hooks/useModal";
+import { AdvertModal } from "../AdvertModal/AdvertModal";
+import { formatLocation } from "../../helpers/formatLocation";
+import { findDetails } from "../../helpers/findDetails";
+import { formatDetails } from "../../helpers/formatDetails";
+import { createFeatureList } from "../../helpers/createFeatureList";
+import { createFeatureIconList } from "../../helpers/createFeatureIconList";
 
 export const AdvertItem = ({
   advert,
@@ -21,47 +28,25 @@ export const AdvertItem = ({
     reviews,
   } = advert;
 
+  const { isOpen, toggleModal } = useModal();
+
   const handleClick = () => {
     if (isFavorite) return onRemoveFavorite();
     onAddFavorite();
   };
 
-  const findDetails = (details, count) => {
-    const detailsEntries = Object.entries(details);
-    const results = [];
-
-    let i = 0;
-    while (i < count) {
-      const randomIndex = Math.floor(Math.random() * detailsEntries.length);
-      const [detail, qty] = detailsEntries[randomIndex];
-
-      const keys = [];
-      results.forEach((result) => keys.push(...Object.keys(result)));
-
-      if (!keys.includes(detail) && typeof qty === "number" && qty > 0) {
-        results.push({ [detail]: qty });
-        i++;
-      }
-    }
-
-    return results;
-  };
-
   const randomDetails = findDetails(details, 3);
-  const formattedDetails = randomDetails.map((detail) => {
-    const [feature, qty] = Object.entries(detail)[0];
-    if (qty === 1) return feature;
-    return `${qty} ${feature}`;
-  });
+  const formattedDetails = formatDetails(randomDetails);
 
-  const featureList = [`${adults} adults`, transmission, engine].concat(
-    formattedDetails
-  );
-  const featureIconList = ["adults", "transmission", "engine"].concat(
-    randomDetails.map((detail) => Object.keys(detail)[0])
+  const featureList = createFeatureList(
+    formattedDetails,
+    adults,
+    transmission,
+    engine
   );
 
-  const formattedLocation = location.split(", ").reverse().join(", ");
+  const featureIconList = createFeatureIconList(randomDetails);
+  const formattedLocation = formatLocation(location);
 
   return (
     <SC.Item>
@@ -105,7 +90,10 @@ export const AdvertItem = ({
             </SC.FeatureItem>
           ))}
         </SC.FeatureList>
-        <SC.ShowMoreBtn type="button">Show more</SC.ShowMoreBtn>
+        <SC.ShowMoreBtn type="button" onClick={toggleModal}>
+          Show more
+        </SC.ShowMoreBtn>
+        {isOpen && <AdvertModal onClose={toggleModal} advert={advert} />}
       </SC.ContentWrapper>
     </SC.Item>
   );

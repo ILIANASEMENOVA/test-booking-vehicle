@@ -67,6 +67,7 @@ export const HeartBtn = styled.button`
 export const HeartIcon = styled.svg`
   width: 24px;
   height: 24px;
+
   stroke: ${(p) => (p["data-is-favorite"] ? "#e44848" : "#101828")};
   fill: ${(p) => (p["data-is-favorite"] ? "#e44848" : "none")};
 `;
