@@ -7,6 +7,7 @@ import { getAllDetails } from "../../helpers/getAllDetails";
 import { formatDetails } from "../../helpers/formatDetails";
 import { createFeatureList } from "../../helpers/createFeatureList";
 import { createFeatureIconList } from "../../helpers/createFeatureIconList";
+import { BookForm } from "../BookForm/BookForm";
 
 export const AdvertModal = ({ onClose, advert }) => {
   const {
@@ -173,7 +174,9 @@ export const AdvertModal = ({ onClose, advert }) => {
             </SC.ReviewList>
           </SC.SectionWrapper>
         )}
-        <SC.BookFormWrapper>Book your campervan now</SC.BookFormWrapper>
+        <SC.BookFormWrapper>
+          <BookForm />
+        </SC.BookFormWrapper>
       </SC.SectionsWrapper>
     </ModalBase>
   );
