@@ -1,7 +1,12 @@
 import * as SC from "./AdvertItem.styled";
 import sprite from "../../assets/sprite.svg";
 
-export const AdvertItem = ({ advert }) => {
+export const AdvertItem = ({
+  advert,
+  isFavorite,
+  onAddFavorite,
+  onRemoveFavorite,
+}) => {
   const {
     name,
     price,
@@ -15,6 +20,11 @@ export const AdvertItem = ({ advert }) => {
     gallery,
     reviews,
   } = advert;
+
+  const handleClick = () => {
+    if (isFavorite) return onRemoveFavorite();
+    onAddFavorite();
+  };
 
   const findDetails = (details, count) => {
     const detailsEntries = Object.entries(details);
@@ -39,7 +49,6 @@ export const AdvertItem = ({ advert }) => {
 
   const randomDetails = findDetails(details, 3);
   const formattedDetails = randomDetails.map((detail) => {
-    console.log(detail);
     const [feature, qty] = Object.entries(detail)[0];
     if (qty === 1) return feature;
     return `${qty} ${feature}`;
@@ -63,8 +72,8 @@ export const AdvertItem = ({ advert }) => {
             <SC.Title>{name}</SC.Title>
             <SC.PriceAndHeartBtnWrapper>
               <SC.Price>€{price.toFixed(2)}</SC.Price>
-              <SC.HeartBtn>
-                <SC.HeartIcon>
+              <SC.HeartBtn type="button" onClick={handleClick}>
+                <SC.HeartIcon data-is-favorite={isFavorite}>
                   <use href={sprite + "#icon-heart"}></use>
                 </SC.HeartIcon>
               </SC.HeartBtn>

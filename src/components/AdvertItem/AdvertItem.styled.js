@@ -42,6 +42,7 @@ export const Title = styled.h3`
   line-height: 1.25;
   color: #101828;
 `;
+
 export const PriceAndHeartBtnWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -66,8 +67,8 @@ export const HeartBtn = styled.button`
 export const HeartIcon = styled.svg`
   width: 24px;
   height: 24px;
-  stroke: #101828;
-  fill: transparent;
+  stroke: ${(p) => (p["data-is-favorite"] ? "#e44848" : "#101828")};
+  fill: ${(p) => (p["data-is-favorite"] ? "#e44848" : "none")};
 `;
 
 export const SecondaryInfo = styled.div`

@@ -12,8 +12,6 @@ const CatalogPage = () => {
     dispatch(fetchAdverts());
   }, [dispatch]);
 
-  console.log(data);
-
   return <div>{data.length > 0 && <AdvertList adverts={data} />}</div>;
 };
 
