@@ -1,4 +1,4 @@
-import{u as t,r as g,j as e,a as K,b as Y,c as J,d as Q}from"./index-d7RgkQZl.js";const U=n=>n.adverts.favorites,mt=n=>n.adverts.isLoading,X=t.li`
+import{u as t,r as g,j as e,a as K,b as Y,c as J,d as Q}from"./index-B7FYjMjm.js";const U=n=>n.adverts.favorites,mt=n=>n.adverts.isLoading,X=t.li`
   display: flex;
   justify-content: center;
   gap: 24px;

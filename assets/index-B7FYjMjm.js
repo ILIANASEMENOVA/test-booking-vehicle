@@ -1,6 +1,6 @@
 function __vite__mapDeps(indexes) {
   if (!__vite__mapDeps.viteFileDeps) {
-    __vite__mapDeps.viteFileDeps = ["assets/CatalogPage-BKJOStD3.js","assets/AdvertList-Rf3Ur4Zf.js","assets/FavoritesPage-CJfORnZQ.js"]
+    __vite__mapDeps.viteFileDeps = ["assets/CatalogPage-BGlzoVlQ.js","assets/AdvertList-DULN2zsx.js","assets/FavoritesPage-gv_w1O8X.js"]
   }
   return indexes.map((i) => __vite__mapDeps.viteFileDeps[i])
 }
@@ -153,4 +153,4 @@ Error generating stack: `+i.message+`
 `,D_=Tn.main`
   padding-top: 40px;
   padding-bottom: 100px;
-`,$_=()=>F.jsxs(z_,{children:[F.jsx(I_,{}),F.jsx(A_,{}),F.jsx(D_,{children:F.jsx(O.Suspense,{fallback:null,children:F.jsx(A0,{})})})]}),F_=O.lazy(()=>mc(()=>import("./HomePage-7NY5dRG5.js"),__vite__mapDeps([]))),M_=O.lazy(()=>mc(()=>import("./CatalogPage-BKJOStD3.js"),__vite__mapDeps([0,1]))),U_=O.lazy(()=>mc(()=>import("./FavoritesPage-CJfORnZQ.js"),__vite__mapDeps([2,1]))),B_=()=>F.jsx("div",{children:F.jsx(z0,{children:F.jsxs(jn,{path:"/",element:F.jsx($_,{}),children:[F.jsx(jn,{index:!0,element:F.jsx(F_,{})}),F.jsx(jn,{path:"catalog",element:F.jsx(M_,{})}),F.jsx(jn,{path:"favorites",element:F.jsx(U_,{})}),F.jsx(jn,{path:"*",element:F.jsx(j0,{to:"/"})})]})})});js.createRoot(document.getElementById("root")).render(F.jsx(Be.StrictMode,{children:F.jsx(H0,{basename:"/test-booking-vehicle",children:F.jsx(y1,{store:Hm,children:F.jsx(om,{loading:null,persistor:OE,children:F.jsx(B_,{})})})})}));export{H_ as a,V_ as b,b_ as c,K_ as d,xs as f,F as j,O as r,Tn as u};
+`,$_=()=>F.jsxs(z_,{children:[F.jsx(I_,{}),F.jsx(A_,{}),F.jsx(D_,{children:F.jsx(O.Suspense,{fallback:null,children:F.jsx(A0,{})})})]}),F_=O.lazy(()=>mc(()=>import("./HomePage-CoL85BWN.js"),__vite__mapDeps([]))),M_=O.lazy(()=>mc(()=>import("./CatalogPage-BGlzoVlQ.js"),__vite__mapDeps([0,1]))),U_=O.lazy(()=>mc(()=>import("./FavoritesPage-gv_w1O8X.js"),__vite__mapDeps([2,1]))),B_=()=>F.jsx("div",{children:F.jsx(z0,{children:F.jsxs(jn,{path:"/",element:F.jsx($_,{}),children:[F.jsx(jn,{index:!0,element:F.jsx(F_,{})}),F.jsx(jn,{path:"catalog",element:F.jsx(M_,{})}),F.jsx(jn,{path:"favorites",element:F.jsx(U_,{})}),F.jsx(jn,{path:"*",element:F.jsx(j0,{to:"/"})})]})})});js.createRoot(document.getElementById("root")).render(F.jsx(Be.StrictMode,{children:F.jsx(H0,{basename:"/test-booking-vehicle",children:F.jsx(y1,{store:Hm,children:F.jsx(om,{loading:null,persistor:OE,children:F.jsx(B_,{})})})})}));export{K0 as L,H_ as a,V_ as b,b_ as c,K_ as d,xs as f,F as j,O as r,Tn as u};

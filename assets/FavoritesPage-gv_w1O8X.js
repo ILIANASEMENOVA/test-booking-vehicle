@@ -1,4 +1,4 @@
-import{u as r,j as e,a as o}from"./index-d7RgkQZl.js";import{a as s,A as a}from"./AdvertList-Rf3Ur4Zf.js";const n="/test-booking-vehicle/assets/empty-placeholder-DK_6X3Vc.jpg",c=r.p`
+import{u as r,j as e,a as o}from"./index-B7FYjMjm.js";import{a as s,A as a}from"./AdvertList-DULN2zsx.js";const n="/test-booking-vehicle/assets/empty-placeholder-DK_6X3Vc.jpg",c=r.p`
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: 600;

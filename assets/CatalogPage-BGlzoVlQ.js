@@ -1,4 +1,4 @@
-import{u as h,r as t,a as x,b as f,j as e,f as b}from"./index-d7RgkQZl.js";import{s as L,A as v}from"./AdvertList-Rf3Ur4Zf.js";const j=h.button`
+import{u as h,r as t,a as x,b as f,j as e,f as b}from"./index-B7FYjMjm.js";import{s as L,A as v}from"./AdvertList-DULN2zsx.js";const j=h.button`
   display: flex;
   margin-top: 50px;
   margin-right: auto;
